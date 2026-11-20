@@ -59,7 +59,7 @@ nav {
     gap: 20px;
 }
 nav a {
-    color: #aebed3;
+    color: #9ad220;
     text-decoration: none;
     font-size: 13px;
 }
@@ -70,13 +70,13 @@ nav a:hover {
     display: flex;
     align-items:center;
     gap:8px;
-    color:#39d6a0;
+    color:#8f1370;
     font-size: 11px;
 }
 .online-dot {
     width: 9px;
     height: 9px;
-    background: #39d6a0;
+    background: #cd77e2;
     border-radius: 50%;
 }
 #clock {
