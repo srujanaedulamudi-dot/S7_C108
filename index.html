@@ -1,45 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
+
+    <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
+
     <title>NETRA Robot Monitoring System</title>
-    
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- HEADER / NAVIGATION BAR -->
     <header class="topbar">
+
         <div class="brand">
-            <div class="brnad-logo">N</div>
+            <div class="brand-logo">N</div>
+
             <div>
                 <h1>NETRA</h1>
                 <p>ROBOT MISSION CONTROL</p>
             </div>
         </div>
+
         <nav>
             <a href="#dashboard">Dashboard</a>
             <a href="#fleet">Fleet</a>
             <a href="#telemetry">Telemetry</a>
             <a href="#alerts">Alerts</a>
         </nav>
+
         <div class="header-right">
             <span class="online-dot"></span>
-            <strong id="clock">SYSTEM ONLINE--:--:--</strong>
+            <strong id="clock">
+                SYSTEM ONLINE --:--:--
+            </strong>
         </div>
+
         <button id="dispatch-open" type="button">
-            + Dispatch Mission</button>
+            + Dispatch Mission
+        </button>
+
     </header>
+
+
+    <!-- MAIN CONTENT -->
     <main class="page">
+
+        <!-- KPI SECTION -->
         <section class="kpi-grid">
+
             <article class="kpi-card">
                 <span>ROVERS ONLINE</span>
                 <h2 id="online-count">6 / 6</h2>
                 <p>Active rover units</p>
             </article>
-           
+
         </section>
+
+
+        <!-- FLEET OVERVIEW HEADING -->
+        <section id="dashboard" class="section-heading">
+
+            <div>
+                <h2>Fleet Overview</h2>
+                <p>Monitor all campus rover activities.</p>
+            </div>
+
+            <span class="live-tag">
+                ● LIVE MONITORING
+            </span>
+
+        </section>
+
+
+        <!-- FLEET MANAGEMENT PANEL -->
+        <section class="panel" id="fleet">
+
+            <!-- PANEL TITLE -->
+            <div class="panel-title">
+
+                <div>
+                    <h2>Fleet Management</h2>
+                    <p>Campus rover information</p>
+                </div>
+
+                <!-- SEARCH BOX -->
+                <input
+                    type="search"
+                    id="rover-search"
+                    placeholder="Search rover or zone..."
+                >
+
+            </div>
+
+
+            <!-- FLEET TABLE -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Rover ID</th>
+                            <th>Zone</th>
+                            <th>Status</th>
+                            <th>Battery</th>
+                            <th>Temperature</th>
+                            <th>Sonar Distance</th>
+                            <th>Speed</th>
+                        </tr>
+                    </thead>
+
+                    <!-- JavaScript adds table rows here -->
+                    <tbody id="fleet-body"></tbody>
+
+                </table>
+
+            </div>
+
+            <!-- TABLE NOTE -->
+            <p class="table-note">
+                Select a rover row to view its sensor readings
+                and telemetry history.
+            </p>
+
+        </section>
+
     </main>
+
+
+    <!-- EXTERNAL JAVASCRIPT -->
     <script src="script.js"></script>
+
 </body>
 </html>
